@@ -2,7 +2,7 @@ create database bd_rh;
 
 use bd_rh;
 
-
+ 
 
 create table tb_funcionario (
 	id_funcionario bigint (5) auto_increment,
