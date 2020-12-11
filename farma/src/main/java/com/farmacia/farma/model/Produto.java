@@ -1,17 +1,10 @@
 package com.farmacia.farma.model;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -30,10 +23,9 @@ public class Produto {
 	@Size(min = 3, max = 99)
 	private String nome;
 	
-	
 	private long preco;
 	
-	@OneToMany (mappedBy = "produto", cascade = CascadeType.ALL)
+	@ManyToOne
 	@JsonIgnoreProperties ("produto")
 	private Categoria categoria;
 	

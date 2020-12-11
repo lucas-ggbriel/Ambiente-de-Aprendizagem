@@ -2,6 +2,7 @@ package com.farmacia.farma.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,9 +30,8 @@ public class Categoria {
 	private String descricao;
 	
 	private boolean ativo;
-
 	
-	@OneToMany
+	@OneToMany (mappedBy = "categoria", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties ("categoria")
 	private List<Produto> produto;
 	

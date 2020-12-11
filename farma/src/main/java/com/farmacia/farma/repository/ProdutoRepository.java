@@ -8,5 +8,6 @@ import com.farmacia.farma.model.Produto;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
-	public List<Produto> findAllNomeContainingIgnoreCase(String nome);	
+
+//	public List<Produto> findAllNomeContainingIgnoreCase(String nome);	
 }
