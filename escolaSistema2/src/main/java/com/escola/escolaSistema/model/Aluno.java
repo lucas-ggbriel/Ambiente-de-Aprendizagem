@@ -1,6 +1,5 @@
 package com.escola.escolaSistema.model;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,13 +24,19 @@ public class Aluno {
 	private String nome;
 
 	private boolean matriculado;
-	
+
 	@ManyToOne
-	@JsonIgnoreProperties ("aluno")
+	@JsonIgnoreProperties("aluno")
 	private Turma turma;
-	
-	
-	
+
+	public Turma getTurma() {
+		return turma;
+	}
+
+	public void setTurma(Turma turma) {
+		this.turma = turma;
+	}
+
 	public long getId() {
 		return id;
 	}

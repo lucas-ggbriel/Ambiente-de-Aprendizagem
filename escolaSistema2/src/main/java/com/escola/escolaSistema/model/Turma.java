@@ -40,6 +40,14 @@ public class Turma {
 	@JsonIgnoreProperties("turma")
 	private List<Aluno> aluno;
 
+	public List<Aluno> getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(List<Aluno> aluno) {
+		this.aluno = aluno;
+	}
+
 	public long getId() {
 		return id;
 	}
