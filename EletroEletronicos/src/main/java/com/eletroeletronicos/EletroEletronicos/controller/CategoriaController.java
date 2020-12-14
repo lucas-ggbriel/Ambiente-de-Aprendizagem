@@ -1,4 +1,4 @@
-package com.escola.escolaSistema.controller;
+package com.eletroeletronicos.EletroEletronicos.controller;
 
 import java.util.List;
 
@@ -15,42 +15,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.escola.escolaSistema.model.Turma;
-import com.escola.escolaSistema.repository.TurmaRepository;
+import com.eletroeletronicos.EletroEletronicos.model.Categoria;
+import com.eletroeletronicos.EletroEletronicos.repository.CategoriaRepository;
 
 @RestController
-@RequestMapping("/sistema")
+@RequestMapping("/categoria")
 @CrossOrigin(value = "*", allowedHeaders = "*")
-public class TurmaController {
+public class CategoriaController {
 
 	@Autowired
-	private TurmaRepository turma;
+	CategoriaRepository categoria;
 
 	@GetMapping
-	public ResponseEntity<List<Turma>> getAll() {
-		return ResponseEntity.ok(turma.findAll());
+	public ResponseEntity<List<Categoria>> getAll() {
+		return ResponseEntity.ok(categoria.findAll());
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Turma> getById(@PathVariable long id) {
+	public ResponseEntity<Categoria> getById(@PathVariable long id) {
 
-		return turma.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.badRequest().build());
+		return categoria.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.badRequest().build());
 
 	}
 
 	@PostMapping
-	public ResponseEntity<Turma> postcat(@RequestBody Turma tur) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(turma.save(tur));
+	public ResponseEntity<Categoria> posteletro(@RequestBody Categoria car) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(categoria.save(car));
 	}
 
 	@PutMapping
-	public ResponseEntity<Turma> putcat(@RequestBody Turma tur) {
-		return ResponseEntity.status(HttpStatus.OK).body(turma.save(tur));
+	public ResponseEntity<Categoria> puteletro(@RequestBody Categoria car) {
+		return ResponseEntity.status(HttpStatus.OK).body(categoria.save(car));
 	}
 
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable long id) {
-		turma.deleteById(id);
+		categoria.deleteById(id);
 	}
 
 }
