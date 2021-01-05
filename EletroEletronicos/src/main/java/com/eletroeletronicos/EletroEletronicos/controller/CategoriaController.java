@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eletroeletronicos.EletroEletronicos.model.Categoria;
 import com.eletroeletronicos.EletroEletronicos.repository.CategoriaRepository;
-
 @RestController
 @RequestMapping("/categoria")
 @CrossOrigin(value = "*", allowedHeaders = "*")
+
 public class CategoriaController {
 
 	@Autowired
