@@ -1,11 +1,12 @@
-package com.generation.Blog.Pessoal.seguranca;
+package com.farmacia.farma.seguranca;
 
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.generation.Blog.Pessoal.model.Usuario;
+import com.farmacia.farma.model.Usuario;
+
 
 public class UserDetailsImpl implements UserDetails {
 

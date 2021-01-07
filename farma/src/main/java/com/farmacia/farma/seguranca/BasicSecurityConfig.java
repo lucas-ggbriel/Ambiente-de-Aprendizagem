@@ -1,4 +1,4 @@
-package com.generation.Blog.Pessoal.seguranca;
+package com.farmacia.farma.seguranca;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

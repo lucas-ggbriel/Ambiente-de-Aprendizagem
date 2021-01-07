@@ -1,4 +1,4 @@
-package com.generation.Blog.Pessoal.seguranca;
+package com.farmacia.farma.seguranca;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.generation.Blog.Pessoal.model.Usuario;
-import com.generation.Blog.Pessoal.repository.UsuarioRepository;
+import com.farmacia.farma.model.Usuario;
+import com.farmacia.farma.repository.UsuarioRepository;
 
 
 
