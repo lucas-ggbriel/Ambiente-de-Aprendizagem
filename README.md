@@ -1,2 +1,2 @@
 # Ambiente de Aprenzigem
-Repositório destinado á postagem de exercícios propostos pela Generation.
+Repositório destinado a postagem de exercícios propostos pela Generation.
